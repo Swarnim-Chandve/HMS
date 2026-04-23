@@ -1,0 +1,7 @@
+.venv/
+.venv2/
+__pycache__/
+*.py[cod]
+.hms.db
+hms.db
+.env

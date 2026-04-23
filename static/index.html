@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>HMS — Sign in</title>
+  <link rel="stylesheet" href="/static/css/app.css" />
+</head>
+<body>
+  <div class="auth-wrap">
+    <div class="auth-card">
+      <h1>Hospital Management</h1>
+      <p class="sub">Sign in or create a patient account (demo)</p>
+      <p class="footer-links">
+        <a href="/app">Dashboard</a> · <a href="/docs">API docs</a>
+      </p>
+      <div class="tabs" role="tablist">
+        <button type="button" class="tab" data-panel="login" aria-selected="true">Sign in</button>
+        <button type="button" class="tab" data-panel="register" aria-selected="false">Register (patient)</button>
+      </div>
+      <div class="panel" id="panel-login">
+        <form id="form-login">
+          <label for="l-email">Email</label>
+          <input id="l-email" name="email" type="text" required autocomplete="username" />
+          <label for="l-pass">Password</label>
+          <input id="l-pass" name="password" type="password" required autocomplete="current-password" />
+          <button type="submit">Sign in</button>
+        </form>
+      </div>
+      <div class="panel" id="panel-register" hidden>
+        <form id="form-register">
+          <label for="r-email">Email</label>
+          <input id="r-email" name="email" type="text" required />
+          <label for="r-pass">Password (8+ characters)</label>
+          <input id="r-pass" name="password" type="password" minlength="8" required />
+          <label for="r-name">Full name</label>
+          <input id="r-name" name="full_name" type="text" required />
+          <label for="r-dob">Date of birth (optional)</label>
+          <input id="r-dob" name="date_of_birth" type="date" />
+          <label for="r-phone">Phone (optional)</label>
+          <input id="r-phone" name="phone" type="text" />
+          <label for="r-addr">Address (optional)</label>
+          <input id="r-addr" name="address" type="text" />
+          <label for="r-ec">Emergency contact (optional)</label>
+          <input id="r-ec" name="emergency_contact" type="text" />
+          <button type="submit">Create account</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div id="toast"></div>
+  <script src="/static/js/api.js"></script>
+  <script src="/static/js/login.js"></script>
+</body>
+</html>
